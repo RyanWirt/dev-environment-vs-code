@@ -1,0 +1,15 @@
+{
+  "name": "LangGraph agent",
+  "image": "ghcr.io/ryanwirt/python-ai-ubuntu-24.04:main",
+  "postCreateCommand": "python3 -m venv .venv && .venv/bin/python -m pip install -e .",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python"
+      }
+    }
+  }
+}
